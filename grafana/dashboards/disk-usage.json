@@ -1,0 +1,13 @@
+{
+  "title": "Disk Usage",
+  "panels": [
+    {
+      "type": "graph",
+      "targets": [
+        {
+          "expr": "100 - ((node_filesystem_avail_bytes{mountpoint=\"/\"} / node_filesystem_size_bytes{mountpoint=\"/\"}) * 100)"
+        }
+      ]
+    }
+  ]
+}
